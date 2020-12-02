@@ -3,6 +3,16 @@
 ---
 @charset "utf-8";
 
+@font-face {
+  font-family: "Lato";
+  src: url("../font/Lato-Light.ttf");
+}
+
+@font-face {
+  font-family: "Lato-Bold";
+  src: url("../font/Lato-Regular.ttf");
+}
+
 @import
   "variables",
   "themes",

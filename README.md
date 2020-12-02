@@ -1,6 +1,6 @@
 # Personal website
 ## Write
-./bin/deploy --gzwongkk
+./bin/deploy
 
 ## Run
 bundle exec jekyll serve --livereload
