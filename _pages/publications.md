@@ -3,7 +3,7 @@ layout: page
 title: Publications
 permalink: /publications/
 description: A growing collection of cool visualization research publication.
-years: [2020]
+years: [2021, 2020]
 nav: true
 ---
 
