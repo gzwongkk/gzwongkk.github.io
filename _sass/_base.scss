@@ -3,9 +3,20 @@
  ******************************************************************************/
 
 // Typography
+* {
+  font-family: 'Lato-Light';
+}
+
+.font-weight-bold{
+  font-family: 'Lato-Bold';
+}
 
 p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
   color: var(--global-text-color);
+}
+
+.site-title {
+  color: var(--global-theme-color);
 }
 
 hr {
@@ -420,9 +431,9 @@ footer.sticky-bottom {
   h2.year {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
-    margin-bottom: -2rem;
+    padding-top: 0rem;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     text-align: right;
   }
   ol.bibliography {
@@ -433,7 +444,7 @@ footer.sticky-bottom {
     li {
       margin-bottom: 1rem;
       .abbr {
-        height: 2rem;
+        // height: 2rem;
         margin-bottom: 0.5rem;
         abbr {
           display: inline-block;
@@ -453,7 +464,7 @@ footer.sticky-bottom {
         }
       }
       .title {
-        font-weight: bolder;
+        font-family: 'Lato-Regular';
       }
       .author {
         a {
@@ -468,9 +479,15 @@ footer.sticky-bottom {
           font-style: normal;
         }
       }
+      .periodical {
+        > em {
+          font-family: 'Lato-LightItalic';
+        }
+      }
       .links {
         a.btn {
           color: var(--global-text-color);
+          font-family: 'Lato-Regular';
           border: 1px solid var(--global-text-color);
           padding-left: 1rem;
           padding-right: 1rem;

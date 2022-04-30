@@ -1,7 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2020-08-15 05:12:20+0800
 inline: true
 ---
 
-A simple inline announcement.
+My first co-authored paper TaxThemis has been accepted to TVCG VAST. Many thanks to Yating and other collaborators.
