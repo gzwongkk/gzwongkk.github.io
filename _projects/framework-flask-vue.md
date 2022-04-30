@@ -10,3 +10,4 @@ category: system
 ---
 
 Purpose: This framework provides a quick jumpstart for visual analytics system.
+[github](https://github.com/gzwongkk/framework-flask-vue)
