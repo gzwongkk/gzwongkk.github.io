@@ -3,20 +3,20 @@
  ******************************************************************************/
 
 @font-face {
-	font-family: "Lato-Regular";
-	src: url("../font/Lato-Regular.ttf");
+  font-family: 'Lato-Regular';
+  src: url('../font/Lato-Regular.ttf');
 }
 @font-face {
-	font-family: "Lato-Bold";
-	src: url("../font/Lato-Bold.ttf");
+  font-family: 'Lato-Bold';
+  src: url('../font/Lato-Bold.ttf');
 }
 @font-face {
-	font-family: "Lato-Light";
-	src: url("../font/Lato-Light.ttf");
+  font-family: 'Lato-Light';
+  src: url('../font/Lato-Light.ttf');
 }
 @font-face {
-	font-family: "Lato-LightItalic";
-	src: url("../font/Lato-LightItalic.ttf");
+  font-family: 'Lato-LightItalic';
+  src: url('../font/Lato-LightItalic.ttf');
 }
 
 // Typography
@@ -24,11 +24,26 @@
   font-family: 'Lato-Light';
 }
 
-.font-weight-bold{
+.font-weight-bold {
   font-family: 'Lato-Bold';
 }
 
-p, h1, h2, h3, h4, h5, h6, em, div, li, span, strong {
+strong {
+  font-family: 'Lato-Regular';
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+em,
+div,
+li,
+span,
+strong {
   color: var(--global-text-color);
 }
 
@@ -49,7 +64,8 @@ table {
   }
 }
 
-a, table.table a {
+a,
+table.table a {
   color: var(--global-theme-color);
   &:hover {
     color: var(--global-theme-color);
@@ -60,7 +76,8 @@ a, table.table a {
   }
 }
 
-figure, img {
+figure,
+img {
   max-width: 90vw;
 }
 
@@ -114,7 +131,8 @@ blockquote {
 
 // Citation
 
-.citation, .citation-number {
+.citation,
+.citation-number {
   color: var(--global-theme-color);
 }
 
@@ -144,7 +162,9 @@ blockquote {
   .profile {
     width: 30%;
     .address {
-      p { display: block; }
+      p {
+        display: block;
+      }
     }
   }
 }
@@ -160,7 +180,6 @@ blockquote {
     }
   }
 }
-
 
 // Navbar customization
 
@@ -185,10 +204,10 @@ blockquote {
 }
 .dropdown-item {
   color: var(--global-text-color);
-    &:hover {
-      color: var(--global-hover-color);
-      background-color: var(--global-bg-color);
-    }
+  &:hover {
+    color: var(--global-hover-color);
+    background-color: var(--global-bg-color);
+  }
 }
 .navbar.navbar-light {
   a {
@@ -205,13 +224,13 @@ blockquote {
       color: var(--global-hover-color);
     }
   }
-  .navbar-nav .nav-item.active>.nav-link {
-      background-color: inherit;
-      font-weight: bolder;
-      color: var(--global-theme-color);
-      &:hover {
-        color: var(--global-hover-color);
-      }
+  .navbar-nav .nav-item.active > .nav-link {
+    background-color: inherit;
+    font-weight: bolder;
+    color: var(--global-theme-color);
+    &:hover {
+      color: var(--global-hover-color);
+    }
   }
   .navbar-brand.social {
     padding-bottom: 0;
@@ -298,7 +317,6 @@ blockquote {
     font-size: 0.8rem;
   }
 }
-
 
 // Footer
 footer.fixed-bottom {
@@ -433,7 +451,6 @@ footer.sticky-bottom {
   }
 }
 
-
 // Distill
 
 .distill {
@@ -442,7 +459,6 @@ footer.sticky-bottom {
     text-decoration: none;
   }
 }
-
 
 // Projects
 
@@ -463,31 +479,33 @@ footer.sticky-bottom {
     }
   }
 
-  .card-item {
-    width: auto;
-    margin-bottom: 10px;
-
-    .row {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  .grid-sizer, .grid-item {
+  .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+
+    a.btn {
+      color: var(--global-text-color);
+      font-family: 'Lato-Regular';
+      border: 1px solid var(--global-text-color);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
   }
 
   h2.category {
     color: var(--global-divider-color);
     border-bottom: 1px solid var(--global-divider-color);
     padding-top: 0.5rem;
-    margin-top: 2rem;
+    // margin-top: 2rem;
     margin-bottom: 1rem;
     text-align: right;
   }
 }
-
 
 // Publications
 
@@ -553,8 +571,8 @@ footer.sticky-bottom {
         a {
           border-bottom: 1px dashed var(--global-theme-color);
           &:hover {
-              border-bottom-style: solid;
-              text-decoration: none;
+            border-bottom-style: solid;
+            text-decoration: none;
           }
         }
         > em {
@@ -640,7 +658,8 @@ pre {
   background-color: var(--global-code-bg-color);
   border-radius: 6px;
   padding: 6px 12px;
-  pre, code {
+  pre,
+  code {
     background-color: transparent;
     border-radius: 0;
     padding: 0;
@@ -654,7 +673,6 @@ code {
   padding: 3px 3px;
 }
 
-
 // Transitioning Themes
 html.transition,
 html.transition *,
@@ -665,13 +683,13 @@ html.transition *:after {
 }
 
 // Extra Markdown style (post Customization)
-.post{
-  .post-meta{
+.post {
+  .post-meta {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
     margin-bottom: 0;
   }
-  .post-tags{
+  .post-tags {
     color: var(--global-text-color-light);
     font-size: 0.875rem;
     padding-top: 0.25rem;
@@ -684,12 +702,30 @@ html.transition *:after {
       }
     }
   }
-  .post-content{
+  .post-content {
     blockquote {
       border-left: 5px solid var(--global-theme-color);
       padding: 8px;
     }
   }
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.iframe-responsive {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
 }
 
 progress {
