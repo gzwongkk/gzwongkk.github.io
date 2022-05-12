@@ -13,12 +13,12 @@ authors:
     url: 'https://jasonwong.vision/'
     affiliations:
       name: VisLab, HKUST
-  - name: Wai TONG
-    url: 'https://wtong2017.github.io/'
-    affiliations:
-      name: VisLab, HKUST
   - name: Linping YUAN
     url: 'http://yuanlinping.academic.site/'
+    affiliations:
+      name: VisLab, HKUST
+  - name: Wai TONG
+    url: 'https://wtong2017.github.io/'
     affiliations:
       name: VisLab, HKUST
 
