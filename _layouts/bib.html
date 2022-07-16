@@ -15,55 +15,105 @@
           <img class="img-fluid z-depth-1 rounded" src="{{ entry.img | prepend: '/assets/img/' | relative_url }}">
         {%- endif -%}
         </div>
-
         <!-- Entry bib key -->
         <div id="{{entry.key}}" class="col-sm-8">
-        {% if entry.type == "thesis" -%}
-          {{reference}}
-        {%- else %}
-          <!-- Title -->
-          <div class="title">{{entry.title}}</div>
-          <!-- Author -->
-          <div class="author">
-          {%- for author in entry.author_array -%}
-            {%- assign author_is_self = false -%}
-            {%- if author.last contains site.scholar.last_name %}
-              {%- if site.scholar.first_name contains author.first -%}
-                {%- assign author_is_self = true -%}
+          {% if entry.type == "thesis" -%}
+            {{reference}}
+          {%- else %}
+            <!-- Title -->
+            <div class="title">{{entry.title}}</div>
+            <!-- Author -->
+            <div class="author">
+            {% assign author_array_size = entry.author_array | size %}
+  
+            {%- if site.max_author_limit and author_array_size > site.max_author_limit %}
+              {% assign author_array_limit = site.max_author_limit %}
+            {% else %}
+              {% assign author_array_limit = author_array_size %}
+            {% endif %}
+  
+            {%- for author in entry.author_array limit: author_array_limit -%}
+              {%- assign author_is_self = false -%}
+              {%- if author.last contains site.scholar.last_name %}
+                {%- if site.scholar.first_name contains author.first -%}
+                  {%- assign author_is_self = true -%}
+                {%- endif -%}
               {%- endif -%}
-            {%- endif -%}
-            
-            {%- if forloop.length == 1 -%}
-              {%- if author_is_self %}
-                <em>{{author.first}} {{author.last}} </em>
-              {%- else -%}
-              {{author.first}} {{author.last}}
+              {%- assign coauthor_url = nil -%}
+              {%- if site.data.coauthors[author.last] -%}
+                {%- for coauthor in site.data.coauthors[author.last] -%}
+                  {%- if coauthor.firstname contains author.first -%}
+                    {%- assign coauthor_url = coauthor.url -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endfor -%}
               {%- endif -%}
-            {%- else -%}
-              {%- unless forloop.last -%}
-                {% if author_is_self %}
-                  <em>{{author.first}} {{author.last}}</em>,&nbsp;
+              
+              {%- if forloop.length == 1 -%}
+                {%- if author_is_self %}
+                  <em>{{author.first}} {{author.last}}</em>
                 {%- else -%}
-                  {% if coauthor_url -%}
-                    <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>,&nbsp;
-                  {%- else -%}
-                    {{author.first}} {{author.last}},&nbsp;
-                  {%- endif -%}
+                  {{author.first}} {{author.last}}
                 {%- endif -%}
               {%- else -%}
-                {% if author_is_self -%}
-                  and <em>{{author.first}} {{author.last}}</em>
-                {% else -%}
-                  {%- if coauthor_url -%}
-                    and <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
-                  {% else -%}
-                    and {{author.first}} {{author.last}}
+                {%- unless forloop.last -%}
+                  {% if author_is_self %}
+                    <em>{{author.first}} {{author.last}}</em>,&nbsp;
+                  {%- else -%}
+                    {% if coauthor_url -%}
+                      <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>,&nbsp;
+                    {%- else -%}
+                      {{author.first}} {{author.last}},&nbsp;
+                    {%- endif -%}
                   {%- endif -%}
-                {%- endif -%}
-              {%- endunless -%}
-            {%- endif -%}
-          {%- endfor %}
-          </div>
+                {%- else -%}
+                  {%- if author_array_limit == author_array_size %} and {% endif %}
+                  {% if author_is_self -%}
+                    <em>{{author.first}} {{author.last}}</em>
+                  {% else -%}
+                    {%- if coauthor_url -%}
+                      <a href="{{coauthor_url}}">{{author.first}} {{author.last}}</a>
+                    {% else -%}
+                      {{author.first}} {{author.last}}
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- endunless -%}
+              {%- endif -%}
+            {%- endfor %}
+  
+            {% assign more_authors = author_array_size | minus: author_array_limit %}
+  
+            {%- if more_authors > 0 %}
+              {% assign more_authors_hide = more_authors | append: " more author" %}
+              {% if more_authors > 1 %}
+                {% assign more_authors_hide = more_authors_hide | append: "s" %}
+              {% endif %}
+              {% assign more_authors_show = '' %}
+              {%- for author in entry.author_array offset: author_array_limit -%}
+                {% assign more_authors_show = more_authors_show | append: author.first | append: " " | append: author.last %}
+                {% unless forloop.last %}
+                  {% assign more_authors_show = more_authors_show | append: ",&nbsp;" %}
+                {% endunless %}
+              {%- endfor -%}
+              and
+              <span
+                  class="more-authors"
+                  title="click to view {{more_authors_hide}}"
+                  onclick="
+                    var element = $(this);
+                    element.attr('title', '');
+                    var more_authors_text = element.text() == '{{more_authors_hide}}' ? '{{more_authors_show}}' : '{{more_authors_hide}}';
+                    var cursorPosition = 0;
+                    var textAdder = setInterval(function(){
+                      element.text(more_authors_text.substring(0, cursorPosition + 1));
+                      if (++cursorPosition == more_authors_text.length){
+                        clearInterval(textAdder);
+                      }
+                    }, 10);
+                  "
+              >{{more_authors_hide}}</span>
+            {% endif %}
+            </div>
 
           <!-- Journal/Book title and date -->
           {% if entry.type == "article" -%}

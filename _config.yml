@@ -114,8 +114,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
-
-news_limit: 5
+    
+news_scrollable: true
+news_limit: 1000
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -156,6 +157,7 @@ plugins:
   - jekyll-feed
   - jekyll-github-metadata
   - jekyll-imagemagick
+  - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll/scholar
   - jekyll-sitemap
@@ -171,6 +173,15 @@ defaults:
       sitemap: false
 # Extras
 github: [metadata]
+
+# -----------------------------------------------------------------------------
+# Jekyll Minifier
+# -----------------------------------------------------------------------------
+
+jekyll-minifier:
+  exclude: ['robots.txt']
+  uglifier_args:
+    harmony: true
 
 # -----------------------------------------------------------------------------
 # Jekyll optimization
@@ -235,6 +246,7 @@ scholar:
 
   query: "@*"
 
+max_author_limit: 5
 
 # -----------------------------------------------------------------------------
 # Responsive WebP Images
