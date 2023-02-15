@@ -1,6 +1,48 @@
 @string{vis = {IEEE Transactions on Visualization and Computer Graphics (Proc. of VIS)}}
 @string{tvcg = {IEEE Transactions on Visualization and Computer Graphics}}
 
+
+@ARTICLE{wong2023anchorage,
+  selected={true},
+  type={article},
+  abbr={TVCG},
+  img={anchorage.png},
+  author={Wong, Kam Kwai and Wang, Xingbo and Wang, Yong and He, Jianben and Zhang, Rong and Qu, Huamin},
+  title={Anchorage: Visual Analysis of Satisfaction in Customer Service Videos via Anchor Events}, 
+  abstract={Delivering customer services through video communications has brought new opportunities to analyze customer satisfaction for quality management. However, due to the lack of reliable self-reported responses, service providers are troubled by the inadequate estimation of customer services and the tedious investigation into multimodal video recordings. We introduce Anchorage, a visual analytics system to evaluate customer satisfaction by summarizing multimodal behavioral features in customer service videos and revealing abnormal operations in the service process. We leverage the semantically meaningful operations to introduce structured event understanding into videos which help service providers quickly navigate to events of their interest. Anchorage supports a comprehensive evaluation of customer satisfaction from the service and operation levels and efficient analysis of customer behavioral dynamics via multifaceted visualization views. We extensively evaluate Anchorage through a case study and a carefully-designed user study. The results demonstrate its effectiveness and usability in assessing customer satisfaction using customer service videos. We found that introducing event contexts in assessing customer satisfaction can enhance its performance without compromising annotation precision. Our approach can be adapted in situations where unlabelled and unstructured videos are collected along with sequential records.},
+  journal=tvcg,
+  year={2023},
+  arxiv={2302.06806},
+}
+
+@ARTICLE{tong2023asymcollab,
+  selected={true},
+  type={article},
+  abbr={VR},
+  img={asymcollab.png},
+  author={Tong, Wai and Xia, Meng and Wong, Kam Kwai and Bowman, Doug A and Pong, Ting-Chuen and Qu, Huamin and Yang, Yalong},
+  title={Towards an Understanding of Distributed Asymmetric Collaborative Visualization on Problem-solving}, 
+  abstract={This paper provided empirical knowledge of the user experience for using collaborative visualization in a distributed asymmetrical setting through controlled user studies. With the ability to access various computing devices, such as Virtual Reality (VR) head-mounted displays, scenarios emerge when collaborators have to or prefer to use different computing environments in different places. However, we still lack an understanding of using VR in an asymmetric setting for collaborative visualization. To get an initial understanding and better inform the designs for asymmetric systems, we first conducted a formative study with 12 pairs of participants. All participants collaborated in asymmetric (PC-VR) and symmetric settings (PC-PC and VR-VR). We then improved our asymmetric design based on the key findings and observations from the first study. Another ten pairs of participants collaborated with enhanced PC-VR and PC-PC conditions in a follow-up study. We found that a well-designed asymmetric collaboration system could be as effective as a symmetric system. Surprisingly, participants using PC perceived less mental demand and effort in the asymmetric setting (PC-VR) compared to the symmetric setting (PC-PC). We provided fine-grained discussions about the trade-offs between different collaboration settings.},
+  journal={To appear in IEEE VR},
+  year={2023},
+  arxiv={2302.01966},
+  git={https://github.com/asymcollabvis/asymcollabvis},
+}
+
+@ARTICLE{feng2023xnli,
+  selected={false},
+  type={article},
+  abbr={TVCG},
+  img={xnli.png},
+  author={Feng, Yingchaojie and Wang, Xingbo and Pan, Bo and Wong, Kam Kwai and Ren, Yi and Liu, Shi and Yan, Zihan and Ma, Yuxin and Qu, Huamin and Chen, Wei},
+  title={XNLI: Explaining and Diagnosing NLI-based Visual Data Analysis}, 
+  abstract={Natural language interfaces (NLIs) enable users to flexibly specify analytical intentions in data visualization. However, diagnosing the visualization results without understanding the underlying generation process is challenging. Our research explores how to provide explanations for NLIs to help users locate the problems and further revise the queries. We present XNLI, an explainable NLI system for visual data analysis. The system introduces a Provenance Generator to reveal the detailed process of visual transformations, a suite of interactive widgets to support error adjustments, and a Hint Generator to provide query revision hints based on the analysis of user queries and interactions. Two usage scenarios of XNLI and a user study verify the effectiveness and usability of the system. Results suggest that XNLI can significantly enhance task accuracy without interrupting the NLI-based analysis process.},
+  journal=tvcg,
+  year={2023},
+  arxiv={2301.10385},
+  doi={https://doi.org/10.1109/TVCG.2023.3240003}
+}
+
 @ARTICLE{zhang2022cohort,
   selected={true},
   type={article},
@@ -8,20 +50,25 @@
   img={cohortva.jpg},
   author={Zhang, Wei and Wong, Jason K. and Wang, Xumeng and Gong, Youcheng and Zhu, Rongchen and Liu, Kai and Yan, Zihan and Tan, Siwei and Qu, Huamin and Chen, Siming and Chen, Wei},
   title={CohortVA: A Visual Analytic System for Interactive Exploration of Cohorts based on Historical Data}, 
+  abstract={In history research, cohort analysis seeks to identify social structures and figure mobilities by studying the group-based behavior of historical figures. Prior works mainly employ automatic data mining approaches, lacking effective visual explanation. In this paper, we present CohortVA, an interactive visual analytic approach that enables historians to incorporate expertise and insight into the iterative exploration process. The kernel of CohortVA is a novel identification model that generates candidate cohorts and constructs cohort features by means of pre-built knowledge graphs constructed from large-scale history databases. We propose a set of coordinated views to illustrate identified cohorts and features coupled with historical events and figure profiles. Two case studies and interviews with historians demonstrate that CohortVA can greatly enhance the capabilities of cohort identifications, figure authentications, and hypothesis generation.},
   journal=vis,
   year={2022},
-  arxiv={2208.09237}
+  arxiv={2208.09237},
+  doi={https://doi.org/10.1109/TVCG.2022.3209483}
 }
 
 @ARTICLE{zhou2022privacy,
-  selected={true},
+  selected={false},
   type={article},
   abbr={VIS},
   img={dpviscreator.png},
   author={Zhou, Jiehui and Wang, Xumeng and Wong, Jason K. and Wang, Huanliang and Wang, Zhongwei and Yang, Xiaoyu and Yan, Xiaoran and Feng, Haozhe and Qu, Huamin and Ying, Haochao and Chen, Wei},
   title={DPVisCreator: Incorporating pattern constraints to privacy-preserving visualizations via differential privacy}, 
+  abstract={Data privacy is an essential issue in publishing data visualizations. However, it is challenging to represent multiple data patterns in privacy-preserving visualizations. The prior approaches target specific chart types or perform an anonymization model uniformly without considering the importance of data patterns in visualizations. In this paper, we propose a visual analytics approach that facilitates data custodians to generate multiple private charts while maintaining user-preferred patterns. To this end, we introduce pattern constraints to model users' preferences over data patterns in the dataset and incorporate them into the proposed Bayesian network-based Differential Privacy (DP) model PriVis. A prototype system, DPVisCreator, is developed to assist data custodians in implementing our approach. The effectiveness of our approach is demonstrated with quantitative evaluation of pattern utility under the different levels of privacy protection, case studies, and semi-structured expert interviews.},
   journal=vis,
-  year={2022}
+  year={2022},
+  arxiv={2208.13418},
+  doi={https://doi.org/10.1109/TVCG.2022.3209391}
 }
 
 @ARTICLE{yang2021explain,
@@ -39,7 +86,7 @@
 }
 
 @article{feng2021ipoet,
-  selected={true},
+  selected={false},
   type={article},
   abbr={ChinaVis},
   img={ipoet.png},
