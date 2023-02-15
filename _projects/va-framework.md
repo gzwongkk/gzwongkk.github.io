@@ -2,7 +2,7 @@
 layout: page
 title: va-framework
 description: a quick jumpstart skeleton for building visual analytics systems
-img: https://v3.cn.vuejs.org/logo.png
+img: https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg
 # redirect: https://github.com/gzwongkk/va-framework
 github: https://github.com/gzwongkk/va-framework
 importance: 2
