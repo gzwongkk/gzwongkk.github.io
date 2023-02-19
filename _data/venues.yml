@@ -1,6 +1,9 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# "TVCG":
+#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
 
-"PhysRev":
-  url: https://journals.aps.org/
+# "VIS":
+#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+
+# "VR":
+#   url: 
+#   color: "#{$light-cyan-color}"

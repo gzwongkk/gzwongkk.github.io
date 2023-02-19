@@ -15,6 +15,7 @@
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{ project.description }}</p>
         <div class="row ml-1 mr-1 p-0">
+          <a href="{{ project.url | relative_url }}" class="btn btn-sm z-depth-0" role="button">Blog</a>
           {%- if project.github -%}
           <a href="{{ project.github }}" class="btn btn-sm z-depth-0" role="button">Github</a>
           {%- endif -%}
