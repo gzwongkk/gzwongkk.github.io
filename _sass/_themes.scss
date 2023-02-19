@@ -7,8 +7,6 @@
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
-  // --global-theme-color: #{$purple-color};
-  // --global-hover-color: #{$purple-color};
   --global-theme-color: #{$cyan-color};
   --global-hover-color: #{$cyan-color};
   --global-footer-bg-color: #{$grey-color-dark};
@@ -17,6 +15,9 @@
   --global-distill-app-color: #{$grey-color};
   --global-divider-color: rgba(0,0,0,.1);
   --global-card-bg-color: #{$white-color};
+
+  --conference-color: #{$conference-color};
+  --journal-color: #{$journal-color};
 
   .fa-sun {
     display : none;

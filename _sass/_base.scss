@@ -542,26 +542,28 @@ footer.sticky-bottom {
       .preview {
         width: 100%;
       }
-      .abbr {
-        // height: 2rem;
+      abbr {
+        display: inline-block;
         margin-bottom: 0.5rem;
-        abbr {
-          display: inline-block;
-          background-color: var(--global-theme-color);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          font-family: 'Lato-Regular';
-          a {
-            color: white;
-            &:hover {
-              text-decoration: none;
-            }
-          }
+        padding-left: 1rem;
+        padding-right: 1rem;
+        background-color: var(--global-theme-color);
+        color: white;
+        font-size: 1rem;
+        font-family: 'Lato-Regular';
+        &:hover {
+          text-decoration: none;
         }
-        .award {
-          color: var(--global-theme-color) !important;
-          border: 1px solid var(--global-theme-color);
-        }
+      }
+      .journal {
+        background-color: var(--journal-color);
+      }
+      .conference {
+        background-color: var(--conference-color);
+      }
+      .award {
+        color: var(--global-theme-color) !important;
+        border: 1px solid var(--global-theme-color);
       }
       .title {
         font-family: 'Lato-Regular';

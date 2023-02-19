@@ -1,9 +1,11 @@
 # "TVCG":
-#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+# #   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+#   type: "journal"
 
 # "VIS":
-#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+#   # url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+#   type: "conference"
 
 # "VR":
-#   url: 
-#   color: "#{$light-cyan-color}"
+# #   url: 
+#   type: "conference"
