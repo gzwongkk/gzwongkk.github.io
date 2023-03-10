@@ -1,10 +1,15 @@
 <!-- _includes/projects.html -->
+
+{% if project.wide -%}
+<div class="grid-item-wide">
+{%- else -%}
 <div class="grid-item">
+{%- endif %}
   {% if project.redirect -%}
   <a href="{{ project.redirect }}">
   {%- else -%}
   <a href="{{ project.url | relative_url }}">
-    {%- endif %}
+  {%- endif %}
     <div class="card hoverable">
       {%- if project.img %}
       {%- include figure.html

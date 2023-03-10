@@ -1,0 +1,10 @@
+<div class="projects">
+  <h2>selected projects</h2>
+  {%- assign sorted_projects = site.projects | sort: "importance" -%}
+  <!-- Generate cards for each project -->
+  <div class="grid">
+    {%- for project in sorted_projects -%}
+      {% include projects.html %}
+    {%- endfor %}
+  </div>
+</div>

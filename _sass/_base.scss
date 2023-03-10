@@ -126,6 +126,20 @@ blockquote {
       display: flex;
       align-items: center;
     }
+
+    a.btn {
+      color: var(--global-text-color);
+      font-family: 'Lato-Regular';
+      border: 1px solid var(--global-text-color);
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      &:hover {
+        color: var(--global-theme-color);
+        border-color: var(--global-theme-color);
+      }
+    }
   }
 }
 
@@ -137,6 +151,12 @@ blockquote {
 }
 
 // Profile
+
+.content {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
 
 .profile {
   width: 100%;
@@ -510,7 +530,6 @@ footer.sticky-bottom {
 // Publications
 
 .publications {
-  margin-top: 2rem;
   h1 {
     color: var(--global-theme-color);
     font-size: 2rem;
