@@ -2,6 +2,44 @@
 @string{tvcg = {IEEE Transactions on Visualization and Computer Graphics}}
 
 
+@ARTICLE{feng2023promptmagician,
+  selected={true},
+  type={article},
+  abbr={IEEE VIS},
+  preview={promptmagician.png},
+  author={Yingchaojie Feng and Xingbo Wang and Kam Kwai Wong and Sijia Wang and Yuhong Lu and Minfeng Zhu and Baicheng Wang and Wei Chen},
+  title={PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation}, 
+  abstract={Generative text-to-image models have gained great popularity among the public for their powerful capability to generate high-quality images based on natural language prompts. However, developing effective prompts for desired images can be challenging due to the complexity and ambiguity of natural language. This research proposes PromptMagician, a visual analysis system that helps users explore the image results and refine the input prompts. The backbone of our system is a prompt recommendation model that takes user prompts as input, retrieves similar prompt-image pairs from DiffusionDB, and identifies special (important and relevant) prompt keywords. To facilitate interactive prompt refinement, PromptMagician introduces a multi-level visualization for the cross-modal embedding of the retrieved images and recommended keywords, and supports users in specifying multiple criteria for personalized exploration. Two usage scenarios, a user study, and expert interviews demonstrate the effectiveness and usability of our system, suggesting it facilitates prompt engineering and improves the creativity support of the generative text-to-image model.},
+  journal=vis,
+  year={2023},
+  arxiv={2307.09036}
+}
+
+@ARTICLE{he2023videopro,
+  selected={false},
+  type={article},
+  abbr={IEEE VIS},
+  preview={videopro.png},
+  author={Jianben He and Xingbo Wang and Kam Kwai Wong and Xijie Huang and Changjian Chen and Zixin Chen and Fengjie Wang and Min Zhu and Huamin Qu},
+  title={PromptMagician: Interactive Prompt Engineering for Text-to-Image Creation}, 
+  abstract={Constructing supervised machine learning models for real-world video analysis applications require substantial labeled data, which is costly to acquire due to scarce domain expertise and laborious manual inspection. While data programming shows promise in generating labeled data at scale with user-defined labeling functions, the high dimensional and complex temporal information in videos pose additional challenges in effectively composing and evaluating labeling functions. In this paper, we propose VideoPro, a visual analytics approach to support flexible and scalable video data programming for model steering with reduced human effort. We first extract human-understandable events from videos using computer vision techniques and treat them as atomic components of labeling functions. We further propose a two-stage template mining algorithm that characterizes the sequential patterns of these events to serve as labeling function templates for efficient data labeling. The visual interface of VideoPro facilitates multifaceted exploration, examination, and application of the labeling templates, allowing for effective programming of video data at scale. Moreover, users can monitor the impact of programming on model performance and make informed adjustments during the iterative programming process. We demonstrate the efficiency and effectiveness of our approach with two case studies and expert interviews.},
+  journal=vis,
+  year={2023}
+}
+
+@ARTICLE{zhang2023tcp,
+  selected={true},
+  type={article},
+  abbr={JCST},
+  preview={tcp_survey.jpg},
+  author={Wei Zhang and Jianwei Zhang and Kam Kwai Wong and Yifang Wang and Yingchaojie Feng and Luwei Wang and Wei Chen},
+  title={Computational Approaches for Traditional Chinese Painting: From the "Six Principles of Painting" Perspective}, 
+  abstract={Traditional Chinese Painting (TCP) is an invaluable cultural heritage resource and a unique visual art style. In recent years, increasing interest has been placed on digitalizing TCPs to preserve and revive the culture. The resulting digital copies have enabled the advancement of computational methods for structured and systematic understanding of TCPs. To explore this topic, we conducted an in-depth analysis of 92 pieces of literature. We examined the current use of computer technologies on TCPs from three perspectives, based on numerous conversations with specialists. First, in light of the ``Six Principles of Painting" theory, we categorized the articles according to their research focus on artistic elements. Second, we created a four-stage framework to illustrate the purposes of TCP applications. Third, we summarized the popular computational techniques applied to TCPs. The framework also provides insights into potential applications and future prospects, with professional opinion. The list of surveyed publications and related information is available online at https://ca4tcp.com.},
+  journal={Journal of computer science and technology},
+  year={2023},
+  website={https://ca4tcp.com/}
+}
+
 @ARTICLE{wong2023anchorage,
   selected={true},
   type={article},
@@ -50,7 +88,7 @@
   type={article},
   abbr={IEEE VIS},
   preview={cohortva.jpg},
-  author={Zhang, Wei and Wong, Jason K. and Wang, Xumeng and Gong, Youcheng and Zhu, Rongchen and Liu, Kai and Yan, Zihan and Tan, Siwei and Qu, Huamin and Chen, Siming and Chen, Wei},
+  author={Zhang, Wei and Kam Kwai Wong and Wang, Xumeng and Gong, Youcheng and Zhu, Rongchen and Liu, Kai and Yan, Zihan and Tan, Siwei and Qu, Huamin and Chen, Siming and Chen, Wei},
   title={CohortVA: A Visual Analytic System for Interactive Exploration of Cohorts based on Historical Data}, 
   abstract={In history research, cohort analysis seeks to identify social structures and figure mobilities by studying the group-based behavior of historical figures. Prior works mainly employ automatic data mining approaches, lacking effective visual explanation. In this paper, we present CohortVA, an interactive visual analytic approach that enables historians to incorporate expertise and insight into the iterative exploration process. The kernel of CohortVA is a novel identification model that generates candidate cohorts and constructs cohort features by means of pre-built knowledge graphs constructed from large-scale history databases. We propose a set of coordinated views to illustrate identified cohorts and features coupled with historical events and figure profiles. Two case studies and interviews with historians demonstrate that CohortVA can greatly enhance the capabilities of cohort identifications, figure authentications, and hypothesis generation.},
   journal=vis,
@@ -65,7 +103,7 @@
   type={article},
   abbr={IEEE VIS},
   preview={dpviscreator.png},
-  author={Zhou, Jiehui and Wang, Xumeng and Wong, Jason K. and Wang, Huanliang and Wang, Zhongwei and Yang, Xiaoyu and Yan, Xiaoran and Feng, Haozhe and Qu, Huamin and Ying, Haochao and Chen, Wei},
+  author={Zhou, Jiehui and Wang, Xumeng and Kam Kwai Wong and Wang, Huanliang and Wang, Zhongwei and Yang, Xiaoyu and Yan, Xiaoran and Feng, Haozhe and Qu, Huamin and Ying, Haochao and Chen, Wei},
   title={DPVisCreator: Incorporating pattern constraints to privacy-preserving visualizations via differential privacy}, 
   abstract={Data privacy is an essential issue in publishing data visualizations. However, it is challenging to represent multiple data patterns in privacy-preserving visualizations. The prior approaches target specific chart types or perform an anonymization model uniformly without considering the importance of data patterns in visualizations. In this paper, we propose a visual analytics approach that facilitates data custodians to generate multiple private charts while maintaining user-preferred patterns. To this end, we introduce pattern constraints to model users' preferences over data patterns in the dataset and incorporate them into the proposed Bayesian network-based Differential Privacy (DP) model PriVis. A prototype system, DPVisCreator, is developed to assist data custodians in implementing our approach. The effectiveness of our approach is demonstrated with quantitative evaluation of pattern utility under the different levels of privacy protection, case studies, and semi-structured expert interviews.},
   journal=vis,
@@ -79,7 +117,7 @@
   type={article},
   abbr={TVCG},
   preview={examples.png},
-  author={Yang, Leni and Xiong, Cindy and Wong, Jason K. and Wu, Aoyu and Qu, Huamin},
+  author={Yang, Leni and Xiong, Cindy and Kam Kwai Wong and Wu, Aoyu and Qu, Huamin},
   title={Explaining with Examples Lessons Learned from Crowdsourced Introductory Description of Information Visualizations}, 
   abstract={Data visualizations have been increasingly used in oral presentations to communicate data patterns to the general public. Clear verbal introductions of visualizations to explain how to interpret the visually encoded information are essential to convey the takeaways and avoid misunderstandings. We contribute a series of studies to investigate how to effectively introduce visualizations to the audience with varying degrees of visualization literacy. We begin with understanding how people are introducing visualizations. We crowdsource 110 introductions of visualizations and categorize them based on their content and structures. From these crowdsourced introductions, we identify different introduction strategies and generate a set of introductions for evaluation. We conduct experiments to systematically compare the effectiveness of different introduction strategies across four visualizations with 1,080 participants. We find that introductions explaining visual encodings with concrete examples are the most effective. Our study provides both qualitative and quantitative insights into how to construct effective verbal introductions of visualizations in presentations, inspiring further research in data storytelling.},
   journal=tvcg,
@@ -98,7 +136,7 @@
   preview={ipoet.png},
   abstract={Chinese painting poetry is an extraordinary aesthetic phenomenon in world art history. It is not only part of the paintings but also helps us to better understand the spiritual conception that the artists express. In this paper, we present an interactive visual system to enable ordinary users to compose customized painting poetry for ancient Chinese paintings, which contain three properties: (1) We employ object detection and image captioning to describe the scenery depicted in the painting. (2) We extend the modern color theory to analyze the underlying emotions of each painting. (3) We propose an interactive poetry generation method that takes the content description and the emotional expression to add the diversity of the poetry creation. Several visual components are carefully designed to visualize and contextualize the features in the painting. They effectively guide users to steer the creation of personalized painting poems. We conduct efficient case studies and user interviews to demonstrate the effectiveness of our system.},
   title={iPoet: Interactive Painting Poetry Creation with Visual Multimodal Analysis},
-  author={Feng, Yingchaojie and Chen, Jiazhou and Huang, Keyu and Wong, Jason K. and Ye, Hui and Zhang, Wei and Zhu, Rongchen and Luo, Xiaonan and Chen, Wei},
+  author={Feng, Yingchaojie and Chen, Jiazhou and Huang, Keyu and Kam Kwai Wong and Ye, Hui and Zhang, Wei and Zhu, Rongchen and Luo, Xiaonan and Chen, Wei},
   journal={Journal of Visualization},
   year={2021},
   doi={10.1007/s12650-021-00780-0},
@@ -111,7 +149,7 @@
   preview={taxthemis.png},
   abstract={Tax evasion is a serious economic problem for many countries, as it can undermine the government' s tax system and lead to an unfair business competition environment. Recent research has applied data analytics techniques to analyze and detect tax evasion behaviors of individual taxpayers. However, they failed to support the analysis and exploration of the uprising related party transaction tax evasion (RPTTE) behaviors (e.g., transfer pricing), where a group of taxpayers is involved. In this paper, we present TaxThemis, an interactive visual analytics system to help tax officers mine and explore suspicious tax evasion groups through analyzing heterogeneous tax-related data. A taxpayer network is constructed and fused with the trade network to detect suspicious RPTTE groups. Rich visualizations are designed to facilitate the exploration and investigation of suspicious transactions between related taxpayers with profit and topological data analysis. Specifically, we propose a calendar heatmap with a carefully-designed encoding scheme to intuitively show the evidence of transferring revenue through related party transactions. We demonstrate the usefulness and effectiveness of TaxThemis through two case studies on real-world tax-related data, and interviews with domain experts.},
   title={TaxThemis: Interactive Mining and Exploration of Suspicious Tax Evasion Groups},
-  author={Lin*, Yating and Wong*, Kamkwai and Wang, Yong and Zhang, Rong and Dong, Bo and Qu, Huamin and Zheng, Qinghua},
+  author={Lin*, Yating and Wong*, Kam Kwai and Wang, Yong and Zhang, Rong and Dong, Bo and Qu, Huamin and Zheng, Qinghua},
   journal=vis,
   year={2020},
   volume={27},
