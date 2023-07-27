@@ -122,11 +122,11 @@
     <!-- Links/Buttons -->
     <div class="links">
     {%- if entry.tldr %}
-      <a class="abstract btn btn-sm z-depth-0" role="button">TLDR</a>
+      <a class="tldr btn btn-sm z-depth-0" role="button">Idea</a>
     {%- endif %}
-    {%- if entry.abstract %}
+    <!-- {%- if entry.abstract %}
       <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
-    {%- endif %}
+    {%- endif %} -->
     {%- if entry.arxiv %}
       <a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
     {%- endif %}
@@ -181,12 +181,17 @@
     {%- endif %}
     </div>
 
-    {% if entry.abstract -%}
-    <!-- Hidden abstract block -->
+    {% if entry.tldr -%}
+    <div class="tldr hidden">
+      <p>{{ entry.tldr }}</p>
+    </div>
+    {%- endif -%}
+
+    <!-- {% if entry.abstract -%}
     <div class="abstract hidden">
       <p>{{ entry.abstract }}</p>
     </div>
-    {%- endif -%}
+    {%- endif -%} -->
 
     {% if entry.bibtex_show -%}
     <!-- Hidden bibtex block -->

@@ -1,0 +1,11 @@
+- name: "All"
+  type: "all"
+
+- name: "Visual Analytics"
+  type: "va"
+
+- name: "Immersive (AR/VR)"
+  type: "ia"
+
+- name: "VIS for AI"
+  type: "ai"
