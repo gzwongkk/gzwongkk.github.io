@@ -14,7 +14,7 @@ authors:
     affiliations:
       name: VisLab, HKUST
   - name: Linping YUAN
-    url: 'http://yuanlinping.academic.site/'
+    url: 'https://yuanlinping.top/'
     affiliations:
       name: VisLab, HKUST
   - name: Wai TONG
