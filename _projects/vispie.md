@@ -2,7 +2,7 @@
 layout: page-multi-author
 title: VisPIE
 description: Promote sustainable lifestyle with AR gamification and digital twin
-img: assets/img/vispie.png
+img: assets/img/project-vispie-thumbnail.png
 video: https://youtu.be/tMn4vzkep8k
 importance: 1
 category: application
@@ -31,14 +31,14 @@ toc:
 ---
 ## Summary
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.html path="assets/img/vispie.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.html path="assets/img/project-vispie-thumbnail.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 
 *VisPIE* is the winner team of the Deloitte ESG Innovation Award in HackUST 2022 (Top prize under the ESG theme). We enable individuals to **Perceive** the environmental implications of their measurable activities, **Immerse** themselves in the climate change impacts, and **Empower** both individuals and organizations with climate-smart choices. We make people believe every action matters and create a more sustainable world together.
 
 ## Features
 <div class="col-sm mt-3 mt-md-0">
-    {% include figure.html path="assets/img/vispie_summary.png" title="example image" class="img-fluid rounded z-depth-1" %}
+    {% include figure.html path="assets/img/project-vispie-summary.png" title="example image" class="img-fluid rounded z-depth-1" %}
 </div>
 We build a digital twin of our living environments with gamification and advanced Augmented Reality (AR) techniques. Our demo takes place on a green campus. We define measurable activities and map each activity to reward points to gamify climate-related choices. For example, each time students use stairs rather than elevators, they earn climate points to exchange for virtual trees to be planted in the digital twin campus.
 

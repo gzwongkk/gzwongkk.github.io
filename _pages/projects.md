@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of cool visualization projects.
 nav: true
 nav_order: 2
-display_categories: [system, application]
+# display_categories: [application, system]
 horizontal: false
 ---
 
@@ -27,7 +27,7 @@ horizontal: false
     </div>
   </div>
   {%- else -%}
-  <div class="grid">
+  <div class="row row-cols-3 grid">
     {%- for project in sorted_projects -%}
       {% include projects.html %}
     {%- endfor %}

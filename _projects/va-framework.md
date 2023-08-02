@@ -1,10 +1,10 @@
 ---
 layout: page
-title: va-framework
-description: a quick jumpstart skeleton for building visual analytics systems
-img: assets/img/Vue.js_Logo_2.svg
+title: VA-framework
+description: A quick jumpstart skeleton for building visual analytics systems
+img: assets/img/project-vue-flask-framework.png
 github: https://github.com/gzwongkk/va-framework
-importance: 2
+importance: 3
 category: system
 ---
 
