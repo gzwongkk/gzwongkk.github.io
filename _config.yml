@@ -121,6 +121,10 @@ permalink: /blog/:year/:title/
 pagination:
   enabled: true
 
+related_blog_posts:
+  enabled: false
+  max_related: 5
+
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
 # the information below.
@@ -162,8 +166,8 @@ collections:
     output: true
     permalink: /projects/:path/
     
-news_scrollable: false # adds a vertical scroll bar if there are more than 3 news items
-news_limit: 1000 # leave blank to include all the news in the `_news` folder
+news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+news_limit: # leave blank to include all the news in the `_news` folder
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -200,19 +204,22 @@ plugins:
   - jekyll-diagrams
   - jekyll-email-protect
   - jekyll-feed
+  - jekyll-get-json
   - jekyll-imagemagick
+  - jekyll-jupyter-notebook
+  - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll/scholar
   - jekyll-sitemap
-  - jekyll-link-attributes
+  - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
 
 # Sitemap settings
 defaults:
   - scope:
-      path: "assets/**/*.*"
+      path: "assets"
     values:
       sitemap: false
 
@@ -272,7 +279,7 @@ scholar:
   query: "@*"
 
 # Filter out certain bibtex entry keywords used internally from the bib output
-filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
+filtered_bibtex_keywords: [selected, type, abbr, area, preview, publish_year, tldr, abstract, arxiv, git, website, presentation]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
 max_author_limit: 6  # leave blank to always show all authors

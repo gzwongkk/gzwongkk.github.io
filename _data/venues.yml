@@ -1,11 +1,17 @@
 # "TVCG":
-# #   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
 #   type: "journal"
+#   background-color: "#00369f"
+#   color: "white"
+  
 
-# "VIS":
-#   # url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
+# "IEEE VIS":
+#   url: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=2945
 #   type: "conference"
+#   background-color: "#00369f"
+#   color: "white"
 
-# "VR":
-# #   url: 
+# "IEEE VR":
 #   type: "conference"
+#   background-color: "#00369f"
+#   color: "white"

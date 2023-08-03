@@ -1,5 +1,5 @@
 ---
-layout: page-multi-author
+layout: distill
 title: VisPIE
 description: Promote sustainable lifestyle with AR gamification and digital twin
 img: assets/img/project-vispie-thumbnail.png
@@ -27,6 +27,8 @@ toc:
   - name: Features
   - name: Benefits
   - name: Demo video
+# toc:
+#   sidebar: left
 
 ---
 ## Summary
@@ -52,8 +54,7 @@ For individuals, the previously invisible behaviors are quantified with digital 
 For organizations, granular and inter-connected data are collected to facilitate efficient operation management. The digital twin acts as a simulation tool that supports resource optimization and climate-smart decision-making, such as eliminating ineffective power usage and rejecting consumables with high carbon footprints. Our solution opens new opportunities for digital transformation initiatives to fulfill sustainability missions and marketing campaigns to develop closer relationships with individuals. Sponsoring the users’ rewards is also favorable to organizations, contributing to higher ESG ratings.
 
 ## Demo video
-<div class="iframe-container">
-    <iframe class="iframe-responsive" src="https://www.youtube.com/embed/tMn4vzkep8k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</div>
+
+{% include video.html path="https://www.youtube.com/embed/tMn4vzkep8k" class="iframe-responsive rounded z-depth-1" %}
 
 Contact us if you are interested about the project.

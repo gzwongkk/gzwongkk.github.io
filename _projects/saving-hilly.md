@@ -1,5 +1,5 @@
 ---
-layout: page-multi-author
+layout: distill
 title: Saving Hilly
 description: The AR mini game for immersive landslide experience with life-saving messages
 img: assets/img/project-hilly-thumbnail.png
