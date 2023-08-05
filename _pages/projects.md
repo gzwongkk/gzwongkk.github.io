@@ -1,10 +1,10 @@
 ---
 layout: page
 title: projects
-permalink: /projects/
+permalink: /#projects
 description: A growing collection of cool visualization projects.
 nav: true
-nav_order: 2
+nav_order: 3
 # display_categories: [application, system]
 horizontal: false
 ---

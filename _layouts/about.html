@@ -3,7 +3,7 @@ layout: default
 ---
 
 <!-- about.html -->
-<div class="post">
+<div id="about" class="post">
   <article>
     {% if page.profile -%}
     <div class="profile float-{%- if page.profile.align == 'left' -%}left{%- else -%}right{%- endif -%}">
@@ -14,8 +14,8 @@ layout: default
           {% else %}
             {%- assign profile_image_class = "img-fluid z-depth-1 rounded" -%}
           {% endif %}
-        {% include figure.html 
-          path=profile_image_path 
+        {% include figure.html
+          path=profile_image_path
           class=profile_image_class
           alt=page.profile.image -%}
       {% endif -%}
@@ -32,14 +32,18 @@ layout: default
     </div>
 
     <!-- News -->
-    {% if page.news -%}
+    {%- if page.news -%}
       {%- include news.html %}
+    {%- endif -%}
+
+    <!-- Ppapers -->
+    {%- if page.selected_papers -%}
+      {%- include selected_papers.html -%}
+    {%- else -%}
+      {%- include papers.html -%}
     {%- endif %}
 
-    <!-- Selected papers -->
-    {% if page.selected_papers -%}
-      {%- include selected_papers.html %}
-    {%- endif %}
+    {%- include projects_all.html -%}
 
     <!-- Social -->
     {%- if page.social %}

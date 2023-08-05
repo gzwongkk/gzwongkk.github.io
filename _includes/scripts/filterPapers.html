@@ -1,0 +1,27 @@
+<script type="text/javascript">
+  function filterPapers(area) {
+    $('.paper').each(function () {
+      var paper = $(this);
+      if (area == 'all' || paper.data('area') == area) {
+        paper.show();
+      } else {
+        paper.hide();
+      }
+    });
+
+    $('.year').each(function() {
+      var year = $(this);
+      var yearId = year.attr('id');
+      var visiblePapersForYear = $('.paper[data-year="' + yearId + '"]:visible');
+      if (visiblePapersForYear.length > 0) {
+        year.show();
+      } else {
+        year.hide();
+      }
+    });
+
+    // Toggle active class for area-tabs
+    $('.area-tab').removeClass('active');
+    $('.area-tab[data-area="' + area + '"]').addClass('active');
+  }
+</script>
