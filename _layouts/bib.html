@@ -1,7 +1,8 @@
 ---
 ---
 <!-- _layouts/bib.html -->
-<div class="row paper" data-area="{{ entry.area }}" data-year="publish-year-{{ entry.publish_year }}">
+<li class="paper" data-area="{{ entry.area }}" data-year="publish-year-{{ entry.publish_year }}">
+<div class="row">
   <!-- Paper preview image -->
   <div class="col-sm-4">
     {%- assign entry_path = entry.preview | prepend: '/assets/img/' -%}
@@ -14,18 +15,19 @@
 
   <!-- Entry bib key -->
   <div id="{{entry.key}}" class="col-sm-8">
-    <!-- Badge -->
+    <!-- Conference Badge -->
     {%- if entry.abbr -%}
       {%- if site.data.venues[entry.abbr] -%}
-        {%- assign venue_style = nil -%}
-        {%- if site.data.venues[entry.abbr].color != blank -%}
-          {%- assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' -%}
-        {%- endif -%}
-        <abbr class="badge" {% if venue_style %}{{venue_style}}{% endif %}><a href="{{site.data.venues[entry.abbr].url}}">{{entry.abbr}}</a></abbr>
+        <abbr class="{{site.data.venues[entry.abbr].type}}">{{entry.abbr}}</abbr>
       {%- else -%}
-        <abbr class="badge">{{entry.abbr}}</abbr>
+        <abbr>{{entry.abbr}}</abbr>
       {%- endif -%}
     {%- endif -%}
+    <!-- Domain Badge -->
+    {%- if entry.domain -%}
+        <abbr class="domain">{{entry.domain}}</abbr>
+    {%- endif -%}
+    
     <!-- Title -->
     <div class="title">{{entry.title}}</div>
     <!-- Author -->
@@ -202,3 +204,4 @@
     </div>
   </div>
 </div>
+</li>

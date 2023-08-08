@@ -298,6 +298,7 @@ filtered_bibtex_keywords:
     selected,
     type,
     abbr,
+    domain,
     area,
     preview,
     publish_year,

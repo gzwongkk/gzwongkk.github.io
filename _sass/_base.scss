@@ -66,13 +66,10 @@ table {
 
 a,
 table.table a {
-  color: var(--global-theme-color);
+  color: var(--global-link-color);
   &:hover {
-    color: var(--global-theme-color);
     text-decoration: underline;
-  }
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
+    color: var(--global-link-color);
   }
 }
 
@@ -219,6 +216,15 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+
+  .nav-link {
+    font-family: 'Lato-Light';
+    color: var(--global-text-color);
+    &:hover {
+      font-family: 'Lato-Regular';
+      color: var(--global-hover-text-color);
+    }
+  }
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);
@@ -519,7 +525,7 @@ footer.sticky-bottom {
 
     &:hover {
       .card-title {
-        color: var(--global-theme-color);
+        color: var(--global-link-color);
       }
     }
   }
@@ -538,16 +544,16 @@ footer.sticky-bottom {
     width: 300px;
 
     a.btn {
-      color: var(--global-text-color);
+      color: var(--global-button-color);
       font-family: 'Lato-Regular';
-      border: 1px solid var(--global-text-color);
+      border: 1px solid var(--global-button-color);
       padding-left: 1rem;
       padding-right: 1rem;
       padding-top: 0.25rem;
       padding-bottom: 0.25rem;
       &:hover {
-        color: var(--global-theme-color);
-        border-color: var(--global-theme-color);
+        color: var(--global-button-text-color);
+        background-color: var(--global-button-color);
       }
     }
   }
@@ -582,7 +588,7 @@ footer.sticky-bottom {
     }
   }
   h2.year {
-    color: var(--global-divider-color);
+    color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 0rem;
     margin-top: 0rem;
@@ -612,14 +618,21 @@ footer.sticky-bottom {
           text-decoration: none;
         }
       }
-      .journal {
-        background-color: var(--journal-color);
+      abbr.published {
+        color: var(--badge-text-color);
+        background-color: var(--published-color);
       }
-      .conference {
-        background-color: var(--conference-color);
+      abbr.preprint {
+        color: var(--badge-text-color);
+        background-color: var(--preprint-color);
       }
-      .award {
-        color: var(--global-theme-color) !important;
+      abbr.domain {
+        color: var(--global-theme-color);
+        box-shadow: 0px 0px 0px 2px var(--global-theme-color) inset;
+        background-color: var(--global-bg-color);
+      }
+      abbr.award {
+        color: var(--badge-text-color) !important;
         border: 1px solid var(--global-theme-color);
       }
       .title {
@@ -638,7 +651,8 @@ footer.sticky-bottom {
           font-style: normal;
         }
         > span.more-authors {
-          color: var(--global-text-color-light);
+          font-family: 'Lato-LightItalic';
+          color: var(--author-text-color);
           border-bottom: 1px dashed var(--global-text-color-light);
           cursor: pointer;
           &:hover {
@@ -654,16 +668,16 @@ footer.sticky-bottom {
       }
       .links {
         a.btn {
-          color: var(--global-text-color);
+          color: var(--global-button-color);
           font-family: 'Lato-Regular';
-          border: 1px solid var(--global-text-color);
+          border: 1px solid var(--global-button-color);
           padding-left: 1rem;
           padding-right: 1rem;
           padding-top: 0.25rem;
           padding-bottom: 0.25rem;
           &:hover {
-            color: var(--global-theme-color);
-            border-color: var(--global-theme-color);
+            color: var(--global-button-text-color);
+            background-color: var(--global-button-color);
           }
         }
       }
@@ -696,11 +710,12 @@ footer.sticky-bottom {
         -o-transition: 0.2s ease;
         transition: all 0.2s ease;
       }
-      div.tldr.hidden {
-        border: dashed 1px var(--global-bg-color);
-      }
-      div.tldr.hidden.open {
-        border-color: var(--global-text-color);
+      div.tldr {
+        background-color: var(--global-popup-color);
+        border-radius: 5px;
+        p {
+          color: var(--global-popup-text-color);
+        }
       }
       div.abstract.hidden {
         border: dashed 1px var(--global-bg-color);
@@ -710,34 +725,30 @@ footer.sticky-bottom {
       }
     }
   }
-}
 
-// Publication area tabs
+  // Publication area tabs
 
-.area-tab {
-  display: inline-block;
-  margin: 0 0.5rem 5px 0.5rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 1rem;
-  font-family: 'Lato-Regular';
-  border-bottom: 2px solid var(--global-text-color-light);
-  cursor: pointer;
-  user-select: none;
-  color: var(--global-text-color-light);
-  &:hover {
-    color: var(--global-hover-color);
-    border-bottom-color: var(--global-hover-color);
+  .area-tab {
+    display: inline-block;
+    margin: 0 0.5rem 5px 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    font-family: 'Lato-Regular';
+    color: var(--global-text-color-light);
+    border-bottom: 1px solid var(--global-text-color-light);
+    cursor: pointer;
+    user-select: none;
+    &:hover {
+      color: var(--global-hover-color);
+      // border-bottom-color: var(--global-hover-color);
+    }
   }
-}
 
-.area-tab.active {
-  color: var(--global-theme-color);
-  border-bottom-color: var(--global-theme-color);
-
-  &:hover {
-    color: var(--global-hover-color);
-    border-left-color: var(--global-hover-color);
+  .area-tab.active {
+    font-family: 'Lato-Regular';
+    color: var(--global-active-color);
+    border-bottom: 2px solid var(--global-active-color);
   }
 }
 
@@ -747,8 +758,8 @@ figure.highlight {
 }
 
 pre {
-  color: var(--global-theme-color);
-  background-color: var(--global-code-bg-color);
+  color: var(--global-popup-text-color);
+  background-color: var(--global-popup-color);
   border-radius: 6px;
   padding: 6px 12px;
   pre,
@@ -760,8 +771,8 @@ pre {
 }
 
 code {
-  color: var(--global-theme-color);
-  background-color: var(--global-code-bg-color);
+  color: var(--global-popup-text-color);
+  background-color: var(--global-popup-color);
   border-radius: 3px;
   padding: 3px 3px;
 }

@@ -2274,7 +2274,8 @@ ul li:last-of-type {
       this.hoverBox.innerHTML = `<ul>
       ${entries
         .map(hover_cite)
-        .map(html => `<li>${html}</li>`)
+        // .map(html => `<li>${html}</li>`)
+        .map(html)
         .join("\n")}
     </ul>`;
     }
