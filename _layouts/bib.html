@@ -20,7 +20,7 @@
       {%- if site.data.venues[entry.abbr] -%}
         <abbr class="{{site.data.venues[entry.abbr].type}}">{{entry.abbr}}</abbr>
       {%- else -%}
-        <abbr>{{entry.abbr}}</abbr>
+        <abbr class="font-weight-bold">{{entry.abbr}}</abbr>
       {%- endif -%}
     {%- endif -%}
     <!-- Domain Badge -->

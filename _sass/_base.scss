@@ -18,6 +18,10 @@
   font-family: 'Lato-LightItalic';
   src: url('../font/Lato-LightItalic.ttf');
 }
+@font-face {
+  font-family: 'Rubik';
+  src: url('../font/Rubik-VariableFont_wght.ttf');
+}
 
 // Typography
 * {
@@ -48,6 +52,7 @@ strong {
 }
 
 .site-title {
+  font-family: 'Rubik';
   color: var(--global-theme-color);
 }
 
@@ -258,6 +263,7 @@ blockquote {
   }
   .navbar-nav .nav-item .nav-link {
     font-size: 1.1rem;
+    font-family: 'Rubik';
     color: var(--global-text-color);
     &:hover {
       color: var(--global-hover-color);
