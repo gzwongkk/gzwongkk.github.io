@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Kam Kam WONG # the website title (if blank, full name will be used instead)
-first_name: WONG
+title: Kam-Kwai WONG # the website title (if blank, full name will be used instead)
+first_name: Kam-Kwai
 middle_name: Jason
-last_name: Kam Kwai
+last_name: Wong
 email: kkwongar@connect.ust.hk
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
@@ -254,7 +254,7 @@ display_tags: ['formatting', 'images', 'links', 'math', 'code'] # this tags will
 
 scholar:
   last_name: [Wong]
-  first_name: [Jason K., Kamkwai, Kam Kwai]
+  first_name: [Kam-Kwai]
 
   style: ieee
   locale: en
@@ -333,8 +333,8 @@ imagemagick:
   enabled: true # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
-    - 800
-    - 1400
+    - 960
+    - 1440
   input_directories:
     - assets/img/
   input_formats:
@@ -343,7 +343,7 @@ imagemagick:
     - '.png'
     - '.tiff'
   output_formats:
-    webp: '-resize 800x'
+    webp: '-resize 960x'
 
 # -----------------------------------------------------------------------------
 # Jekyll Diagrams
