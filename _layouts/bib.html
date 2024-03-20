@@ -110,6 +110,8 @@
   {%- endif -%}
   {%- if entry.month -%}
     {%- capture entrymonth -%}{{ " " }}{{ entry.month | capitalize }}{%- endcapture -%}
+  {%- else -%}
+    {%- capture entrymonth -%}{%- endcapture -%}
   {%- endif -%}
   {%- if entry.note -%}
     {%- capture entrynote -%}{{ " " }}{{entry.note}}{%- endcapture -%}
@@ -133,6 +135,7 @@
     {%- if entry.tldr %}
       <a class="tldr btn btn-sm z-depth-0" role="button">Idea</a>
     {%- endif %}
+    <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
     <!-- {%- if entry.abstract %}
       <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
     {%- endif %} -->
@@ -190,7 +193,6 @@
     {%- if entry.presentation %}
       <a href="{{ entry.presentation }}" class="btn btn-sm z-depth-0" role="button">Presentation</a>
     {%- endif %}
-    <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
     </div>
 
     {% if entry.tldr -%}

@@ -275,8 +275,8 @@ scholar:
   details_link: Details
 
   query: '@*'
-  sort_by: year, month
-  order: descending, descending
+  sort_by: selected, my_position, year
+  order: descending, ascending, descending
   type_order:
     [
       unpublished,
@@ -308,6 +308,7 @@ filtered_bibtex_keywords:
     git,
     website,
     presentation,
+    my_position
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
