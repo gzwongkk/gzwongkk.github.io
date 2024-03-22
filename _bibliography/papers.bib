@@ -1,5 +1,25 @@
 @string{tvcg = {IEEE Transactions on Visualization and Computer Graphics}}
 
+@ARTICLE{wong2024prismatic,
+  selected={true},
+  my_position={1},
+  type={article},
+  area={va},
+  abbr={Arxiv},
+  domain={Fintech},
+  publish_year={2024},
+  preview={paper-prismatic.png},
+  author={Kam-Kwai, Wong and Luo, Yan and Yue, Xuanwu and Chen, Wei and Qu, Huamin},
+  title={{Prismatic: Interactive Multi-View Cluster Analysis of Concept Stocks}}, 
+  tldr={We used both fundamental and quantitative investing strategies to cluster companies into concept stocks.},
+  tldr_image={paper-prismatic-framework.png},
+  abstract={Financial cluster analysis allows investors to discover investment alternatives and avoid undertaking excessive risks. However, this analytical task faces substantial challenges arising from many pairwise comparisons, the dynamic correlations across time spans, and the ambiguity in deriving implications from business relational knowledge. We propose Prismatic, a visual analytics system that integrates quantitative analysis of historical performance and qualitative analysis of business relational knowledge to cluster correlated businesses interactively. Prismatic features three clustering processes: dynamic cluster generation, knowledge-based cluster exploration, and correlation-based cluster validation. Utilizing a multi-view clustering approach, it enriches data-driven clusters with knowledge-driven similarity, providing a nuanced understanding of business correlations. Through well-coordinated visual views, Prismatic facilitates a comprehensive interpretation of intertwined quantitative and qualitative features, demonstrating its usefulness and effectiveness via case studies on formulating concept stocks and extensive interviews with domain experts.},
+  journal={arXiv preprint arXiv:2402.08978},
+  year={2024},
+  note={Under Review},
+  arxiv={2402.08978},
+}
+
 @ARTICLE{zhang2024scrolltimes,
   selected={true},
   my_position={2},
@@ -15,7 +35,7 @@
   abstract={The study of cultural artifact provenance, tracing ownership and preservation, holds significant importance in archaeology and art history. Modern technology has advanced this field, yet challenges persist, including recognizing evidence from diverse sources, integrating sociocultural context, and enhancing interactive automation for comprehensive provenance analysis. In collaboration with art historians, we conducted an examination of handscrolls, a traditional Chinese painting form that provides a rich source of historical data and a unique opportunity to explore history through cultural artifacts. We present a three-tiered methodology encompassing Artifact, Contextual, and Provenance levels, designed to create "Biographies" for handscrolls. Our approach incorporates the application of image processing techniques and language models to extract, validate, and augment elements within handscrolls using various cultural heritage databases. To facilitate efficient analysis of non-contiguous extracted elements, we have developed a distinctive layout. Additionally, we introduce ScrollTimes, a visual analysis system tailored to support the three-tiered analysis of handscrolls, allowing art historians to interactively create biographies tailored to their interests. Validated through case studies and expert interviews, our approach offers a window into history, fostering a holistic understanding of handscroll provenance and historical significance.},
   journal=tvcg,
   year={2024},
-  note={To appear},
+  note={To Appear},
   arxiv={2306.08834},
 }
 
@@ -94,6 +114,7 @@
   author={He, Jianben and Wang, Xingbo and Kam-Kwai, Wong and Huang, Xijie and Chen, Changjian and Chen, Zixin and Wang, Fengjie and Zhu, Min and Qu, Huamin},
   title={VideoPro: A Visual Analytics Approach for Interactive Video Programming}, 
   tldr={We reduced human effort in labeling video data and model steering with flexible, scalable video data programming.},
+  tldr_image={paper-videopro-framework.png},
   abstract={Constructing supervised machine learning models for real-world video analysis applications require substantial labeled data, which is costly to acquire due to scarce domain expertise and laborious manual inspection. While data programming shows promise in generating labeled data at scale with user-defined labeling functions, the high dimensional and complex temporal information in videos pose additional challenges in effectively composing and evaluating labeling functions. In this paper, we propose VideoPro, a visual analytics approach to support flexible and scalable video data programming for model steering with reduced human effort. We first extract human-understandable events from videos using computer vision techniques and treat them as atomic components of labeling functions. We further propose a two-stage template mining algorithm that characterizes the sequential patterns of these events to serve as labeling function templates for efficient data labeling. The visual interface of VideoPro facilitates multifaceted exploration, examination, and application of the labeling templates, allowing for effective programming of video data at scale. Moreover, users can monitor the impact of programming on model performance and make informed adjustments during the iterative programming process. We demonstrate the efficiency and effectiveness of our approach with two case studies and expert interviews.},
   journal=tvcg,
   year={2024},
@@ -142,7 +163,7 @@
   abstract={Traditional Chinese Painting (TCP) is an invaluable cultural heritage resource and a unique visual art style. In recent years, increasing interest has been placed on digitalizing TCPs to preserve and revive the culture. The resulting digital copies have enabled the advancement of computational methods for structured and systematic understanding of TCPs. To explore this topic, we conducted an in-depth analysis of 92 pieces of literature. We examined the current use of computer technologies on TCPs from three perspectives, based on numerous conversations with specialists. First, in light of the ``Six Principles of Painting" theory, we categorized the articles according to their research focus on artistic elements. Second, we created a four-stage framework to illustrate the purposes of TCP applications. Third, we summarized the popular computational techniques applied to TCPs. The framework also provides insights into potential applications and future prospects, with professional opinion. The list of surveyed publications and related information is available online at https://ca4tcp.com.},
   journal={Journal of Computer Science and Technology},
   year={2023},
-  note={To appear},
+  note={To Appear},
   arxiv={2307.14227},
   website={https://ca4tcp.com/},
 }
@@ -166,6 +187,25 @@
   pages={1-14},
   doi={10.1109/TVCG.2023.3240003},
   arxiv={2301.10385},
+}
+
+@ARTICLE{weng2024artificialtextdetection,
+  selected={false},
+  my_position={3},
+  type={article},
+  area={ai},
+  abbr={Arxiv},
+  domain={Generative AI},
+  publish_year={2023},
+  preview={paper-2023-textdetection.png},
+  author={Weng, Luoxuan and Zhu, Minfeng and Wong, Kam Kwai and Liu, Shi and Sun, Jiashun and Zhu, Hang and Han, Dongming and Chen, Wei},
+  title={{Towards an Understanding and Explanation for Mixed-Initiative Artificial Scientific Text Detection}}, 
+  tldr={We summarized features that tell human-written and AI-generated text apart.},
+  abstract={Large language models (LLMs) have gained popularity in various fields for their exceptional capability of generating human-like text. Their potential misuse has raised social concerns about plagiarism in academic contexts. However, effective artificial scientific text detection is a non-trivial task due to several challenges, including 1) the lack of a clear understanding of the differences between machine-generated and human-written scientific text, 2) the poor generalization performance of existing methods caused by out-of-distribution issues, and 3) the limited support for human-machine collaboration with sufficient interpretability during the detection process. In this paper, we first identify the critical distinctions between machine-generated and human-written scientific text through a quantitative experiment. Then, we propose a mixed-initiative workflow that combines human experts' prior knowledge with machine intelligence, along with a visual analytics prototype to facilitate efficient and trustworthy scientific text detection. Finally, we demonstrate the effectiveness of our approach through two case studies and a controlled user study with proficient researchers. We also provide design implications for interactive artificial text detection tools in high-stakes decision-making scenarios.},
+  journal={arXiv preprint arXiv:2304.05011},
+  year={2023},
+  note={Under Review},
+  arxiv={2304.05011},
 }
 
 @ARTICLE{zhou2023dpviscreator,

@@ -139,18 +139,18 @@
     <!-- {%- if entry.abstract %}
       <a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>
     {%- endif %} -->
-    {%- if entry.doi %}
-      {% if entry.doi contains 'https://doi.org/' -%}
-        <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
-      {%- else -%}
-        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
-      {%- endif %}
-    {%- endif %}
     {%- if entry.arxiv %}
       {% if entry.arxiv contains '://' -%}
         <a href="{{ entry.arxiv }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
       {%- else -%}
         <a href="{{ entry.arxiv | prepend: 'http://arxiv.org/abs/' }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+      {%- endif %}
+    {%- endif %}
+    {%- if entry.doi %}
+      {% if entry.doi contains 'https://doi.org/' -%}
+        <a href="{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
+      {%- else -%}
+        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {%- endif %}
     {%- endif %}
     {%- if entry.pdf %}
@@ -198,6 +198,14 @@
     {% if entry.tldr -%}
     <div class="tldr hidden">
       <p>{{ entry.tldr }}</p>
+      {% if entry.tldr_image -%}
+      {%- assign entry_tldr_image_path = entry.tldr_image | prepend: '/assets/img/' -%}
+      {% include figure.html
+        path=entry_tldr_image_path
+        class="preview z-depth-1 rounded"
+        zoomable=true
+        alt=entry.tldr_image -%}
+      {%- endif -%}
     </div>
     {%- endif -%}
 
