@@ -1,6 +1,6 @@
 <div id="publications" class="publications">
   <h2>Publications</h2>
-  <div>
+  <div id="area-tab">
     <span class="area-tab active" data-area="all" onclick="filterPapers('all')">All</span>
     {% for area in page.areas %}
     <span class="area-tab" data-area="{{ area.bibquery }}" onclick="filterPapers('{{ area.bibquery }}')">{{ area.text }}</span>
